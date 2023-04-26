@@ -36,7 +36,7 @@ namespace CarService.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("BodyType");
+                    b.ToTable("BodyTypes");
                 });
 
             modelBuilder.Entity("CarCore.Entities.Brand", b =>
@@ -53,7 +53,7 @@ namespace CarService.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Brand");
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("CarCore.Entities.Car", b =>
@@ -125,7 +125,7 @@ namespace CarService.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("DriveType");
+                    b.ToTable("DriveTypes");
                 });
 
             modelBuilder.Entity("CarCore.Entities.EngineType", b =>
@@ -142,7 +142,7 @@ namespace CarService.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("EngineType");
+                    b.ToTable("EngineTypes");
                 });
 
             modelBuilder.Entity("CarCore.Entities.ModelOfCar", b =>
@@ -159,7 +159,7 @@ namespace CarService.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("ModelOfCar");
+                    b.ToTable("ModelsOfCars");
                 });
 
             modelBuilder.Entity("CarCore.Entities.TransmissionType", b =>
@@ -176,7 +176,7 @@ namespace CarService.Infrastructure.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("TransmissionType");
+                    b.ToTable("TransmissionTypes");
                 });
 
             modelBuilder.Entity("CarCore.Entities.Car", b =>

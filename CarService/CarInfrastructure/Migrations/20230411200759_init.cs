@@ -10,7 +10,7 @@ namespace CarService.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "BodyType",
+                name: "BodyTypes",
                 columns: table => new
                 {
                     ID = table.Column<long>(type: "bigint", nullable: false)
@@ -19,11 +19,11 @@ namespace CarService.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BodyType", x => x.ID);
+                    table.PrimaryKey("PK_BodyTypes", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Brand",
+                name: "Brands",
                 columns: table => new
                 {
                     ID = table.Column<long>(type: "bigint", nullable: false)
@@ -32,11 +32,11 @@ namespace CarService.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Brand", x => x.ID);
+                    table.PrimaryKey("PK_Brands", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "DriveType",
+                name: "DriveTypes",
                 columns: table => new
                 {
                     ID = table.Column<long>(type: "bigint", nullable: false)
@@ -45,11 +45,11 @@ namespace CarService.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DriveType", x => x.ID);
+                    table.PrimaryKey("PK_DriveTypes", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "EngineType",
+                name: "EngineTypes",
                 columns: table => new
                 {
                     ID = table.Column<long>(type: "bigint", nullable: false)
@@ -58,11 +58,11 @@ namespace CarService.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_EngineType", x => x.ID);
+                    table.PrimaryKey("PK_EngineTypes", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ModelOfCar",
+                name: "ModelsOfCars",
                 columns: table => new
                 {
                     ID = table.Column<long>(type: "bigint", nullable: false)
@@ -71,11 +71,11 @@ namespace CarService.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ModelOfCar", x => x.ID);
+                    table.PrimaryKey("PK_ModelsOfCars", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "TransmissionType",
+                name: "TransmissionTypes",
                 columns: table => new
                 {
                     ID = table.Column<long>(type: "bigint", nullable: false)
@@ -84,7 +84,7 @@ namespace CarService.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TransmissionType", x => x.ID);
+                    table.PrimaryKey("PK_TransmissionTypes", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -108,39 +108,39 @@ namespace CarService.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Cars", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Cars_BodyType_BodyTypeID",
+                        name: "FK_Cars_BodyTypes_BodyTypeID",
                         column: x => x.BodyTypeID,
-                        principalTable: "BodyType",
+                        principalTable: "BodyTypes",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Cars_Brand_BrandID",
+                        name: "FK_Cars_Brands_BrandID",
                         column: x => x.BrandID,
-                        principalTable: "Brand",
+                        principalTable: "Brands",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Cars_DriveType_DriveTypeID",
+                        name: "FK_Cars_DriveTypes_DriveTypeID",
                         column: x => x.DriveTypeID,
-                        principalTable: "DriveType",
+                        principalTable: "DriveTypes",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Cars_EngineType_EngineTypeID",
+                        name: "FK_Cars_EngineTypes_EngineTypeID",
                         column: x => x.EngineTypeID,
-                        principalTable: "EngineType",
+                        principalTable: "EngineTypes",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Cars_ModelOfCar_ModelOfCarID",
+                        name: "FK_Cars_ModelsOfCars_ModelOfCarID",
                         column: x => x.ModelOfCarID,
-                        principalTable: "ModelOfCar",
+                        principalTable: "ModelsOfCars",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Cars_TransmissionType_TransmissionTypeID",
+                        name: "FK_Cars_TransmissionTypes_TransmissionTypeID",
                         column: x => x.TransmissionTypeID,
-                        principalTable: "TransmissionType",
+                        principalTable: "TransmissionTypes",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -182,22 +182,22 @@ namespace CarService.Infrastructure.Migrations
                 name: "Cars");
 
             migrationBuilder.DropTable(
-                name: "BodyType");
+                name: "BodyTypes");
 
             migrationBuilder.DropTable(
-                name: "Brand");
+                name: "Brands");
 
             migrationBuilder.DropTable(
-                name: "DriveType");
+                name: "DriveTypes");
 
             migrationBuilder.DropTable(
-                name: "EngineType");
+                name: "EngineTypes");
 
             migrationBuilder.DropTable(
-                name: "ModelOfCar");
+                name: "ModelsOfCars");
 
             migrationBuilder.DropTable(
-                name: "TransmissionType");
+                name: "TransmissionTypes");
         }
     }
 }

@@ -13,14 +13,13 @@ namespace CarService.Infrastructure.Context
     {
         public CarAppContext(DbContextOptions<CarAppContext> options) : base(options)
         {
-            Database.EnsureCreated();
         }
-        //public DbSet<BodyType> BodyTypes { get; set; } = null!;
-        //public DbSet<Brand> Brands { get; set; } = null!;
-        public DbSet<Car> Cars { get; set; } = null!;
-        //public DbSet<DriveType> DriveTypes { get; set; } = null!;
-        //public DbSet<EngineType> EngineTypes { get; set; } = null!;
-        //public DbSet<ModelOfCar> ModelsOfCars { get; set; } = null!;
-        //public DbSet<TransmissionType> TransmissionTypes { get; set; } = null!;
+        public DbSet<BodyType> BodyTypes { get; set; }
+        public DbSet<Brand> Brands { get; set; } 
+        public DbSet<DriveType> DriveTypes { get; set; } 
+        public DbSet<EngineType> EngineTypes { get; set; } 
+        public DbSet<ModelOfCar> ModelsOfCars { get; set; } 
+        public DbSet<TransmissionType> TransmissionTypes { get; set; } 
+        public DbSet<Car> Cars { get; set; } 
     }
 }
