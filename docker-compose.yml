@@ -1,0 +1,70 @@
+version: "3.9"
+services:
+
+  carservice-db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Password1"
+      MSSQL_PID: "Express"
+      MSSQL_TCP_PORT: "9823"
+    networks:
+      - carplat
+
+  announcement-db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Password1"
+      MSSQL_PID: "Express"
+      MSSQL_TCP_PORT: "9824"
+    networks:
+      - carplat
+
+  #announcement-db:
+    #build:
+      #context: .
+      #dockerfile: announcement-db.Dockerfile
+    #environment:
+    #  ACCEPT_EULA: "Y"
+    #  SA_PASSWORD: "DBPassword20"
+    #  MSSQL_PID: "Express"
+    #  MSSQL_TCP_PORT: "9823"
+    #networks:
+    #  - carplat
+
+  announcement:
+    build:
+      context: .
+      dockerfile: AnnouncementService.Dockerfile
+    ports:
+      - "5002:5002"
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=announcement-db,9824;Database=announcement-db;User Id=sa;Password=Password1"
+    #  ServicesURLs__CarService: http://0.0.0.0:5005/
+    #  ASPNETCORE_URLS: http://0.0.0.0:5002/
+    depends_on:
+      - announcement-db
+    networks:
+      - carplat
+
+  car:
+    build:
+      context: .
+      dockerfile: CarService.Dockerfile
+    ports:
+      - "5005:5005"
+    environment:
+
+      ConnectionStrings__DefaultConnection: "Server=carservice-db,9823;Database=CarApp6;User Id=sa;Password=Password1"
+      ASPNETCORE_URLS: http://0.0.0.0:5005/
+    networks:
+      - carplat
+    depends_on:
+      - carservice-db
+
+
+
+networks:
+  carplat:
+    driver: bridge
