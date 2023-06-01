@@ -1,16 +1,15 @@
-using CarService.Core.Interfaces;
-using CarService.Core.Profiles;
-using CarService.Core.ServiceCore.BodyTypeService;
-using CarService.Core.ServiceCore.BrandService;
-using CarService.Core.ServiceCore.CarService;
-using CarService.Core.ServiceCore.DriveTypeService;
-using CarService.Core.ServiceCore.EngineTypeService;
-using CarService.Core.ServiceCore.ModelOfCarService;
-using CarService.Core.ServiceCore.TransmissionTypeService;
-using CarService.Infrastructure.Context;
-using CarService.Infrastructure.Repository;
+using CarServices.Core.Interfaces;
+using CarServices.Core.Profiles;
+using CarServices.Core.ServiceCore.BodyTypeService;
+using CarServices.Core.ServiceCore.BrandService;
+using CarServices.Core.ServiceCore.CarServices;
+using CarServices.Core.ServiceCore.DriveTypeService;
+using CarServices.Core.ServiceCore.EngineTypeService;
+using CarServices.Core.ServiceCore.ModelOfCarService;
+using CarServices.Core.ServiceCore.TransmissionTypeService;
+using CarServices.Infrastructure.Context;
+using CarServices.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
-using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
@@ -24,13 +23,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //domain
-services.AddScoped<ICarService, ÑarService>();
 services.AddScoped<IBodyTypeService, BodyTypeService>();
 services.AddScoped<IBrandService, BrandService>();
 services.AddScoped<IDriveTypeService, DriveTypeService>();
 services.AddScoped<IEngineTypeService, EngineTypeService>();
 services.AddScoped<IModelOfCarService, ModelOfCarService>();
 services.AddScoped<ITransmissionTypeService, TransmissionTypeService>();
+services.AddScoped<ICarService, CarService>();
 
 //infrastructure
 services.AddScoped<ICarRepository, CarEFRepository>();

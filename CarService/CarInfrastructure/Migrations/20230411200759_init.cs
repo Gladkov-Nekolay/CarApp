@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CarService.Infrastructure.Migrations
+namespace CarServices.Infrastructure.Migrations
 {
     public partial class init : Migration
     {

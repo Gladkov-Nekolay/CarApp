@@ -1,17 +1,12 @@
 ﻿using CarCore.Entities;
-using CarService.Core.Interfaces;
-using CarService.Core.Models;
-using CarService.Infrastructure.Context;
+using CarServices.Core.Interfaces;
+using CarServices.Core.Models;
+using CarServices.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CarService.Infrastructure.Repository
+namespace CarServices.Infrastructure.Repository
 {
-    public class CarEFRepository: ICarRepository
+    public class CarEFRepository : ICarRepository
     {
         private readonly CarAppContext _dbContext;
         public CarEFRepository(CarAppContext Context)

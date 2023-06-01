@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarInfrastructure\CarService.Infrastructure.csproj" />
-    <ProjectReference Include="..\CarService\CarService.Core.csproj" />
+    <ProjectReference Include="..\CarInfrastructure\CarServices.Infrastructure.csproj" />
+    <ProjectReference Include="..\CarService\CarServices.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,13 +1,8 @@
-﻿using CarService.Core.Interfaces;
-using CarService.Infrastructure.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CarServices.Core.Interfaces;
+using CarServices.Infrastructure.Context;
 using DriveType = CarCore.Entities.DriveType;
 
-namespace CarService.Infrastructure.Repository
+namespace CarServices.Infrastructure.Repository
 {
     public class DriveTypeEFRepository : GenericTypeEFRepository<DriveType>, IDriveTypeRepository
     {

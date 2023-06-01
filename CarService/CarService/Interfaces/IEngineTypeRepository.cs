@@ -1,13 +1,8 @@
 ﻿using CarCore.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CarService.Core.Interfaces
+namespace CarServices.Core.Interfaces
 {
-    public interface IEngineTypeRepository: IGenericTypeRepository<EngineType>
+    public interface IEngineTypeRepository : IGenericTypeRepository<EngineType>
     {
     }
 }

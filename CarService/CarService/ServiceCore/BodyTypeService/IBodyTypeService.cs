@@ -1,14 +1,9 @@
 ﻿using CarCore.Entities;
-using CarService.Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarServices.Core.Interfaces;
 
-namespace CarService.Core.ServiceCore.BodyTypeService
+namespace CarServices.Core.ServiceCore.BodyTypeService
 {
-    public interface IBodyTypeService: IGenericTypeRepository<BodyType>
+    public interface IBodyTypeService : IGenericTypeRepository<BodyType>
     {
     }
 }
