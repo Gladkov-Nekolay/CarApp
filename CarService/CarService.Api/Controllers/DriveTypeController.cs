@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using CarService.Core.Models;
-using CarService.Core.ServiceCore.DriveTypeService;
-using Microsoft.AspNetCore.Http;
+using CarServices.Core.Models;
+using CarServices.Core.ServiceCore.DriveTypeService;
 using Microsoft.AspNetCore.Mvc;
 using DriveType = CarCore.Entities.DriveType;
 
-namespace CarService.Api.Controllers
+namespace CarServices.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

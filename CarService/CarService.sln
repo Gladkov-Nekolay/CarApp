@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarService.Api", "CarService.Api\CarService.Api.csproj", "{10F648A2-0C26-4A10-9118-00030F192E32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarServices.Api", "CarService.Api\CarServices.Api.csproj", "{10F648A2-0C26-4A10-9118-00030F192E32}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D53ABB58-28C8-4480-8DCA-5A7DBFA78D6A} = {D53ABB58-28C8-4480-8DCA-5A7DBFA78D6A}
 		{FF76C2A8-8E27-44C7-BE5C-D3AF9C2C7586} = {FF76C2A8-8E27-44C7-BE5C-D3AF9C2C7586}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarService.Infrastructure", "CarInfrastructure\CarService.Infrastructure.csproj", "{FF76C2A8-8E27-44C7-BE5C-D3AF9C2C7586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarServices.Infrastructure", "CarInfrastructure\CarServices.Infrastructure.csproj", "{FF76C2A8-8E27-44C7-BE5C-D3AF9C2C7586}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D53ABB58-28C8-4480-8DCA-5A7DBFA78D6A} = {D53ABB58-28C8-4480-8DCA-5A7DBFA78D6A}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarService.Core", "CarService\CarService.Core.csproj", "{D53ABB58-28C8-4480-8DCA-5A7DBFA78D6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarServices.Core", "CarService\CarServices.Core.csproj", "{D53ABB58-28C8-4480-8DCA-5A7DBFA78D6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

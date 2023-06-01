@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
 using CarCore.Entities;
-using CarService.Core.Interfaces;
-using CarService.Core.ServiceCore.GenericTypeService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarServices.Core.Interfaces;
+using CarServices.Core.ServiceCore.GenericTypeService;
 
-namespace CarService.Core.ServiceCore.ModelOfCarService
+namespace CarServices.Core.ServiceCore.ModelOfCarService
 {
     public class ModelOfCarService : GenericTypeService<ModelOfCar, IModelOfCarRepository>, IModelOfCarService
     {

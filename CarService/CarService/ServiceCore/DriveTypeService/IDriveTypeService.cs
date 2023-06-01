@@ -1,12 +1,7 @@
-﻿using CarService.Core.ServiceCore.GenericTypeService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CarServices.Core.ServiceCore.GenericTypeService;
 using DriveType = CarCore.Entities.DriveType;
 
-namespace CarService.Core.ServiceCore.DriveTypeService
+namespace CarServices.Core.ServiceCore.DriveTypeService
 {
     public interface IDriveTypeService : IGenericTypeService<DriveType>
     {

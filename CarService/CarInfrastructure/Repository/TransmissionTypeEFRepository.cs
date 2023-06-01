@@ -1,13 +1,8 @@
 ﻿using CarCore.Entities;
-using CarService.Core.Interfaces;
-using CarService.Infrastructure.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarServices.Core.Interfaces;
+using CarServices.Infrastructure.Context;
 
-namespace CarService.Infrastructure.Repository
+namespace CarServices.Infrastructure.Repository
 {
     public class TransmissionTypeEFRepository : GenericTypeEFRepository<TransmissionType>, ITransmissionTypeRepository
     {

@@ -1,10 +1,9 @@
 ﻿using CarCore.Entities;
-using CarService.Core.Models;
-using CarService.Core.ServiceCore.CarService;
-using Microsoft.AspNetCore.Http;
+using CarServices.Core.Models;
+using CarServices.Core.ServiceCore.CarServices;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CarService.Api.Controllers
+namespace CarServices.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,12 +1,7 @@
 ﻿using CarCore.Entities;
-using CarService.Core.ServiceCore.GenericTypeService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarServices.Core.ServiceCore.GenericTypeService;
 
-namespace CarService.Core.ServiceCore.TransmissionTypeService
+namespace CarServices.Core.ServiceCore.TransmissionTypeService
 {
     public interface ITransmissionTypeService : IGenericTypeService<TransmissionType>
     {

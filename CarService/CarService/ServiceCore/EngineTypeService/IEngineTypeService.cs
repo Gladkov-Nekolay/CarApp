@@ -1,12 +1,7 @@
 ﻿using CarCore.Entities;
-using CarService.Core.ServiceCore.GenericTypeService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarServices.Core.ServiceCore.GenericTypeService;
 
-namespace CarService.Core.ServiceCore.EngineTypeService
+namespace CarServices.Core.ServiceCore.EngineTypeService
 {
     public interface IEngineTypeService : IGenericTypeService<EngineType>
     {

@@ -1,15 +1,10 @@
 ﻿using AutoMapper;
 using CarCore.Entities;
-using CarService.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarServices.Core.Models;
 
-namespace CarService.Core.Profiles
+namespace CarServices.Core.Profiles
 {
-    public class CarProfile:Profile
+    public class CarProfile : Profile
     {
         public CarProfile()
         {

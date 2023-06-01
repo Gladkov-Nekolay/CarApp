@@ -1,12 +1,7 @@
 ﻿using AutoMapper;
-using CarService.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarServices.Core.Models;
 using DriveType = CarCore.Entities.DriveType;
-namespace CarService.Core.Profiles
+namespace CarServices.Core.Profiles
 {
     public class DriveTypeProfile : Profile
     {
